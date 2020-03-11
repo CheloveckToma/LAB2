@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class MainClass {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<Vector> listSnippets = new ArrayList<>();
+        List<Vector> listOfVectors = new ArrayList<>();
 
         System.out.println("Введите количество отрезков:");
-        int numSnippets = sc.nextInt();
-        for (int i = 0; i < numSnippets; i++) {
+        int countOfVectors = sc.nextInt();
+        for (int i = 0; i < countOfVectors; i++) {
             System.out.println("Введите отрезок №" + (i + 1));
             System.out.println("Введите координаты первой точки отрезка через пробел:");
             Point2D point1 = new Point2D(sc.nextDouble(), sc.nextDouble());
@@ -21,10 +21,10 @@ public class MainClass {
 
             Vector vector = new Vector(point1, point2);
 
-            listSnippets.add(vector);
+            listOfVectors.add(vector);
         }
 
         Shadow shadow = new Shadow();
-        System.out.println(shadow.findShadow(listSnippets));
+        System.out.println(shadow.findShadowLenght(listOfVectors));
     }
 }

@@ -26,7 +26,7 @@ public class ShadowTest {
         vectors.add(vector6);
 
         Shadow sizeShadow = new Shadow();
-        double result = sizeShadow.findShadow(vectors);
+        double result = sizeShadow.findShadowLenght(vectors);
 
         assertEquals(21, result, 1);
     }

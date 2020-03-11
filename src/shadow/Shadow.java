@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Shadow {
 
-    public double findShadow(List<Vector> vectors) {
+    public double findShadowLenght(List<Vector> vectors) {
 
         for (int i = 0; i < vectors.size(); i++) {
             for (int j = 0; j < vectors.size(); j++) {
