@@ -19,12 +19,12 @@ public class MainClass {
             System.out.println("Введите координаты второй точки отрезка через пробел:");
             Point2D point2 = new Point2D(sc.nextDouble(), sc.nextDouble());
 
-            Vector snippet = new Vector(point1, point2);
+            Vector vector = new Vector(point1, point2);
 
-            listSnippets.add(snippet);
+            listSnippets.add(vector);
         }
 
         Shadow shadow = new Shadow();
-        System.out.println(shadow.calcShadow(listSnippets));
+        System.out.println(shadow.findShadow(listSnippets));
     }
 }

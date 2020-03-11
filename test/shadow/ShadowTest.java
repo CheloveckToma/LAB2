@@ -26,7 +26,7 @@ public class ShadowTest {
         vectors.add(vector6);
 
         Shadow sizeShadow = new Shadow();
-        double result = sizeShadow.calcShadow(vectors);
+        double result = sizeShadow.findShadow(vectors);
 
         assertEquals(21, result, 1);
     }
@@ -46,6 +46,6 @@ public class ShadowTest {
         Vector vector2 = new Vector(new Point2D(6, 10), new Point2D(7, 10));
 
         Shadow sizeShadow = new Shadow();
-        assertTrue(sizeShadow.isRemoveSnippet(vector1, vector2));
+        assertTrue(sizeShadow.isRemoveVector(vector1, vector2));
     }
 }

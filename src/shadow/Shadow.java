@@ -5,16 +5,17 @@ import java.util.List;
 
 
 public class Shadow {
-    public double calcShadow(List<Vector> vectors) {
+
+    public double findShadow(List<Vector> vectors) {
 
         for (int i = 0; i < vectors.size(); i++) {
             for (int j = 0; j < vectors.size(); j++) {
                 if (isMerge(vectors.get(i), vectors.get(j))) {
-                    merge(vectors.get(i), vectors.get(j));
+                    mergeVectors(vectors.get(i), vectors.get(j));
                     removeSnippet(vectors.get(j), vectors);
                 }
 
-                if (isRemoveSnippet(vectors.get(i), vectors.get(j))) {
+                if (isRemoveVector(vectors.get(i), vectors.get(j))) {
                     removeSnippet(vectors.get(j), vectors);
                 }
             }
@@ -34,12 +35,12 @@ public class Shadow {
                 (vector1.getPoint1().x < vector2.getPoint2().x && vector2.getPoint2().x < vector1.getPoint2().x);
     }
 
-    public boolean isRemoveSnippet(Vector vector1, Vector vector2) {
+    public boolean isRemoveVector(Vector vector1, Vector vector2) {
         return (vector1.getPoint1().x < vector2.getPoint1().x && vector2.getPoint1().x < vector1.getPoint2().x) &&
                 (vector1.getPoint1().x < vector2.getPoint2().x && vector2.getPoint2().x < vector1.getPoint2().x);
     }
 
-    public void merge(Vector vector1, Vector vector2) {
+    public void mergeVectors(Vector vector1, Vector vector2) {
         double maxPoint = vector1.getPoint1().x;
         double minPoint = vector1.getPoint1().x;
 
