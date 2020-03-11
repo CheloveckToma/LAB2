@@ -18,7 +18,7 @@ public class ShadowTest {
         Vector vector6 = new Vector(new Point2D(15, 8), new Point2D(22, 8));
 
         List<Vector> vectors = new ArrayList<>();
-        vectors.add(vector2);
+        vectors.add(vector1);
         vectors.add(vector2);
         vectors.add(vector3);
         vectors.add(vector4);

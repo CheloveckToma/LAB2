@@ -64,7 +64,6 @@ public class Quadrangle {
     public boolean isTrapeze(Vector vectorOne, Vector vectorThree) throws ZeroCoordinateException {
         Vector middleLine = new Vector((vectorOne.getX1() + vectorOne.getX2()) / 2, (vectorOne.getY1() + vectorOne.getY2()) / 2, (vectorThree.getX1() + vectorThree.getX2()) / 2, (vectorThree.getY1() + vectorThree.getY2()) / 2);
         if ((middleLine.getVectorLong() == ((vectorTwo.getVectorLong() + vectorFour.getVectorLong()) / 2)) && !isCosZero(vectorOne, vectorThree)) {
-
             return true;
         } else {
             return false;
